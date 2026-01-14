@@ -1,0 +1,66 @@
+{
+  "name": "my-lawyer-platform",
+  "description": "A secure, bilingual legal platform",
+  "version": "1.0.0",
+  "private": true,
+  "backend": {
+    "framework": "Laravel 11",
+    "php_version": "8.2+",
+    "database": "MySQL 8.0+",
+    "port": 8000,
+    "key_features": [
+      "Sanctum Authentication",
+      "Role-Based Access Control",
+      "Case Management",
+      "Appointment Scheduling",
+      "Bilingual Support (EN/AR)"
+    ]
+  },
+  "frontend": {
+    "framework": "Next.js 14",
+    "nodejs_version": "18+",
+    "port": 3000,
+    "styling": "TailwindCSS",
+    "key_features": [
+      "Responsive Design",
+      "Language Toggle (EN/AR)",
+      "Role-Based UI",
+      "Secure Booking System",
+      "Premium UI Theme"
+    ]
+  },
+  "theme": {
+    "primary_color": "#0a192f",
+    "primary_name": "Navy Blue",
+    "accent_color": "#d4af37",
+    "accent_name": "Gold",
+    "fonts": {
+      "en": "Montserrat",
+      "ar": "Tajawal"
+    }
+  },
+  "security": {
+    "authentication": "Laravel Sanctum",
+    "cors": "Restricted to frontend domain",
+    "csrf_protection": true,
+    "https_ready": true
+  },
+  "localization": {
+    "primary_locale": "ar",
+    "fallback_locale": "en",
+    "supported_languages": ["en", "ar"],
+    "text_direction": {
+      "en": "ltr",
+      "ar": "rtl"
+    }
+  },
+  "roles": {
+    "lawyer": {
+      "permissions": ["manage_cases", "view_appointments", "message_clients"]
+    },
+    "client": {
+      "permissions": ["view_dashboard", "book_consultation", "view_cases"]
+    }
+  },
+  "setup_instructions": "See README.md and SETUP_GUIDE.md"
+}
